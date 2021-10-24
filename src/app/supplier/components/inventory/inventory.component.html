@@ -1,0 +1,94 @@
+<div class="dashboard admin" style="width: 1200px!important">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4">Inventory</h1>
+          <hr style="border: 2px solid black">
+          <br>
+          <p class="lead text-muted">Welcome Supplier</p>
+
+         
+        <div class="btn-group mb-4" role="group">
+            <a [routerLink]="['/supplier/orders/status-pending']"  class="btn btn-light">
+                <i class="fa fa-clock text-info mr-1"></i>
+              Pending Orders</a>
+            <a [routerLink]="['/supplier/inventory']" class="btn btn-dark">
+              <i class="fab fa-houzz text-info mr-1"></i>
+              Inventory</a> 
+              <a [routerLink]="['/supplier/orders/status-completed']" class="btn btn-light">
+                <i class="fa fa-tasks text-info mr-1"></i>
+                Completed Orders</a> 
+          </div>
+          <hr style="border: 1px solid black">
+          <p class="lead text-muted" style="font-size:28px!important">Products - <b style="color:green;font-weight: bold;">Live</b><a [routerLink]="['/supplier']" routerLinkActive="router-link-active"  class="btn btn-success" style="font-size: 19px;color:black!important;margin-left: 30px;">Sell more</a></p>
+           
+          <div class="row product-row">
+            <div class="col-lg-8" style="margin-left:0px!important;padding:0px!important">
+                <div class="row" style="margin-left:0px!important;padding:0px!important">
+                    <div class="col-lg-3" style="margin-left:0px!important;padding:0px!important">
+                        <img class="img-p" style="width:100px;height:100px;border-radius: 20px;object-fit:cover" src="../../../../assets/images/back2.jpeg" alt="Generic placeholder image"  class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <div class="col-lg-5" style="border-bottom: 4px solid black">
+                        <div style="line-height:0.5;margin-top:10px">
+                            <p><b>Apple iPhone XR (Red, 128 GB)</b></p>
+                            <p style="line-height:1;">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p>
+                            <p>Status :<b style="color:green">Live</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin:auto!important;line-height:0.1">
+            <h2>$450</h2>
+            <p style="color:green">Quantity: 4</p>
+            <a [routerLink]="['update']" routerLinkActive="router-link-active"  class="btn btn-success" style="font-size: 20px;color:black!important"><b>Edit inventory</b></a>
+            </div>
+        </div>
+
+        <div class="row product-row">
+            <div class="col-lg-8" style="margin-left:0px!important;padding:0px!important">
+                <div class="row" style="margin-left:0px!important;padding:0px!important">
+                    <div class="col-lg-3" style="margin-left:0px!important;padding:0px!important">
+                        <img class="img-p" style="width:100px;height:100px;border-radius: 20px;object-fit:cover" src="../../../../assets/images/back2.jpeg" alt="Generic placeholder image"  class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <div class="col-lg-5" style="border-bottom: 4px solid black">
+                        <div style="line-height:0.5;margin-top:10px">
+                            <p><b>Apple iPhone XR (Red, 128 GB)</b></p>
+                            <p style="line-height:1;">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p>
+                            <p>Status :<b style="color:green">Live</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin:auto!important;line-height:0.1">
+            <h2>$450</h2>
+            <p style="color:green">Quantity: 4</p>
+            <a [routerLink]="['update']" routerLinkActive="router-link-active"  class="btn btn-success" style="font-size: 20px;color:black!important"><b>Edit inventory</b></a>
+            </div>
+        </div>
+        <div class="row product-row">
+            <div class="col-lg-8" style="margin-left:0px!important;padding:0px!important">
+                <div class="row" style="margin-left:0px!important;padding:0px!important">
+                    <div class="col-lg-3" style="margin-left:0px!important;padding:0px!important">
+                        <img class="img-p" style="width:100px;height:100px;border-radius: 20px;object-fit:cover" src="../../../../assets/images/back2.jpeg" alt="Generic placeholder image"  class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <div class="col-lg-5" style="border-bottom: 4px solid black">
+                        <div style="line-height:0.5;margin-top:10px">
+                            <p><b>Apple iPhone XR (Red, 128 GB)</b></p>
+                            <p style="line-height:1;">128 GB ROM | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip Processor</p>
+                            <p>Status :<b style="color:green">Live</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin:auto!important;line-height:0.1">
+            <h2>$450</h2>
+            <p style="color:green">Quantity: 4</p>
+            <a [routerLink]="['update']" routerLinkActive="router-link-active"  class="btn btn-success" style="font-size: 20px;color:black!important"><b>Edit inventory</b></a>
+            </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>

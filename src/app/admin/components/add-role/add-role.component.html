@@ -1,0 +1,29 @@
+
+
+ <div class="register" style="margin-top: 50px ; padding-top: 20px;padding-bottom: 30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Role Details</h1>
+          <p class="lead text-center">Add new role</p>
+          <form (ngSubmit)="createRole()">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg"
+
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.username}" 
+               placeholder="Enter role" name="rolename" 
+              [(ngModel)]="role.rolename"
+              
+              required />
+
+              <div class="invalid-feedback d-block">{{error.name}}</div>
+            </div>
+            
+            
+            
+            <input type="submit" class="btn btn-info btn-block mt-4" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

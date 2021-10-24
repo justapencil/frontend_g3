@@ -1,0 +1,45 @@
+
+
+ <div class="register" style="margin-top: 50px ; padding-top: 20px;padding-bottom: 30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Product Details</h1>
+          <p class="lead text-center">Add Product</p>
+          <form (ngSubmit)="createProduct()">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg"
+
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.username}" 
+               placeholder="Enter product name" name="name" 
+              [(ngModel)]="catalog.name"
+              autocomplete="off"
+              required />
+
+              <div class="invalid-feedback d-block">{{error.name}}</div>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="sel1" name="catID" [(ngModel)]="catalog.catID">
+                <option value="" disabled selected>Please Choose...</option>
+                <option value="Cat1">Cat1</option>
+                <option value="Cat2">Cat2</option>
+                <option value="Cat3">Cat3</option>
+                <option value="Cat4">Cat4</option>
+              </select>
+            </div>
+            <div class="form-group shadow-textarea">
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write product description here..." name="description" [(ngModel)]="catalog.description"></textarea>
+                <div class="invalid-feedback d-block">{{error.description}}</div>
+              </div>
+              <div class="custom-file">
+                <input type="file" name="image" class="custom-file-input" id="customFileLang" lang="es" [ngModel]="catalog.image">
+                <label class="custom-file-label" for="customFileLang">Choose Image</label>
+                <div class="invalid-feedback d-block">{{error.image}}</div>
+              </div>
+            <input type="submit" value="Create"class="btn btn-info btn-block mt-4" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

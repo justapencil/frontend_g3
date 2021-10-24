@@ -1,0 +1,45 @@
+
+
+ <div class="register" style="margin-top: 50px ; padding-top: 20px;padding-bottom: 30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Catalog Details</h1>
+          <p class="lead text-center">Update Catalog : <b style="color:green; font-weight: bold;">Apple iPhone XR (Red, 128 GB)</b></p>
+          <form (ngSubmit)="updateProduct()">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg"
+
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.username}" 
+               placeholder="Enter product name" name="name" 
+              [(ngModel)]="product.name"
+              autocomplete="off"
+              required />
+
+              <div class="invalid-feedback d-block">{{error.name}}</div>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="sel1" name="catID" [(ngModel)]="product.catID">
+                <option value="" disabled selected>Please Choose...</option>
+                <option value="Cat1">Cat1</option>
+                <option value="Cat2">Cat2</option>
+                <option value="Cat3">Cat3</option>
+                <option value="Cat4">Cat4</option>
+              </select>
+            </div>
+            <div class="form-group shadow-textarea">
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write product description here..." name="description" [(ngModel)]="product.description"></textarea>
+                <div class="invalid-feedback d-block">{{error.description}}</div>
+              </div>
+              <div class="custom-file">
+                <input type="file" name="image" class="custom-file-input" id="customFileLang" lang="es" [ngModel]="product.image">
+                <label class="custom-file-label" for="customFileLang">Choose Image</label>
+                <div class="invalid-feedback d-block">{{error.image}}</div>
+              </div>
+            <input type="submit" value="Update"class="btn btn-info btn-block mt-4" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

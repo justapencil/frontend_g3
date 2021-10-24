@@ -1,0 +1,36 @@
+
+
+ <div class="register" style="margin-top: 50px ; padding-top: 20px;padding-bottom: 30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Inventory Details</h1>
+          <p class="lead text-center">Update Inventory : <b style="color:green">Apple iPhone XR (Red, 128 GB)</b></p>
+          <form (ngSubmit)="updateInventory()">
+            <div class="form-group">
+              <input type="number" class="form-control form-control-lg"
+
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.username}" 
+               placeholder="4" name="productquantity" placeholder
+              [(ngModel)]="inventory.productquantity"
+              autocomplete="off"
+              required />
+
+              <div class="invalid-feedback d-block">{{error.productquantity}}</div>
+            </div>
+            <div class="form-group">
+              <input type="number" step="0.01" class="form-control form-control-lg"
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.email}" 
+              
+              placeholder="$450" name="productprice" 
+              [(ngModel)]="inventory.productprice"/>
+             <div class="invalid-feedback d-block">{{error.productprice}}</div>
+              
+            </div>
+            <input type="submit" value="Update" class="btn btn-info btn-block mt-4" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

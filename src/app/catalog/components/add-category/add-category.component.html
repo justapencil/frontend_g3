@@ -1,0 +1,25 @@
+
+ <div class="register" style="margin-top: 50px ; padding-top: 20px;padding-bottom: 30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Category Details</h1>
+          <p class="lead text-center">Add Category</p>
+          <form (ngSubmit)="createCategory()">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg"
+
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.name}" 
+               placeholder="Enter category name" name="name" 
+              [(ngModel)]="category.name"
+              
+              required />
+
+              <div class="invalid-feedback d-block">{{error.name}}</div>
+            </div>
+                <input type="submit" class="btn btn-info btn-block mt-4" value="Create"/>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

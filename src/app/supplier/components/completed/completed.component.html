@@ -1,0 +1,96 @@
+<div class="dashboard admin" style="width: 1200px!important">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4">Completed Orders</h1>
+          <hr style="border: 2px solid black">
+          <br>
+          <p class="lead text-muted">Welcome Supplier</p>
+
+         
+        <div class="btn-group mb-4" role="group">
+            <a [routerLink]="['/supplier/orders/status=pending']"  class="btn btn-light">
+                <i class="fa fa-clock text-info mr-1"></i>
+              Pending Orders</a>
+            <a [routerLink]="['/supplier/inventory']" class="btn btn-light">
+              <i class="fab fa-houzz text-info mr-1"></i>
+              Inventory</a> 
+              <a [routerLink]="['/supplier/orders/status-completed']" class="btn btn-dark">
+                <i class="fa fa-tasks text-info mr-1"></i>
+                Completed Orders</a> 
+          </div>
+          <hr style="border: 1px solid black">
+          <p class="lead text-muted" style="font-size:28px!important">Orders Status - <b style="color:green;font-weight: bold">Completed</b></p>
+           <!-------Product Starting-->
+          <div class="row product-row">
+            <div class="col-lg-8" style="margin-left:0px!important;padding:0px!important">
+                <div class="row" style="margin-left:0px!important;padding:0px!important">
+                    <div class="col-lg-3" style="margin-left:0px!important;padding:0px!important">
+                        <img class="img-p" style="width:100px;height:100px;border-radius: 20px;object-fit:cover" src="../../../../assets/images/back2.jpeg" alt="Generic placeholder image"  class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <div class="col-lg-5" style="border-bottom: 4px solid black">
+                        <div style="line-height:0.5;margin-top:10px">
+                            <p>Order Id : <b>#43211323</b></p>
+                            <p>Product Name : <b>Product 1</b></p>
+                            <p>Ordered By : <b>Username 1</b></p>
+                            <p>Status :<b style="color:green">Delivered</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4" style="margin:auto!important;">
+            <h2>$450</h2>
+            <a [routerLink]="['view']" routerLinkActive="router-link-active"  class="btn btn-success" style="font-size: 20px;color:black!important"><b>View Details</b></a>
+            </div>
+        </div>
+<!-------Product Ending-->
+
+        <div class="row product-row">
+            <div class="col-lg-8" style="margin-left:0px!important;padding:0px!important;">
+                <div class="row" style="margin-left:0px!important;padding:0px!important;">
+                    <div class="col-lg-3" style="margin-left:0px!important;padding:0px!important">
+                        <img class="img-p" style="width:100px;height:100px;border-radius: 20px;object-fit:cover" src="../../../../assets/images/back2.jpeg" alt="Generic placeholder image"  class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <div class="col-lg-5" style="border-bottom: 4px solid black;">
+                        <div style="line-height:0.5;margin-top:10px">
+                            <p>Order Id : <b>#43211323</b></p>
+                            <p>Product Name : <b>Product 1</b></p>
+                            <p>Ordered By : <b>Username 1</b></p>
+                            <p>Status :<b style="color:green">Delivered</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin:auto!important;">
+            <h2>$450</h2>
+            <a [routerLink]="['view']" routerLinkActive="router-link-active"  class="btn btn-success" style="font-size: 20px;color:black!important"><b>View Details</b></a>
+            </div>
+        </div>
+<!-------Product Ending-->
+        <div class="row product-row">
+            <div class="col-lg-8" style="margin-left:0px!important;padding:0px!important">
+                <div class="row" style="margin-left:0px!important;padding:0px!important">
+                    <div class="col-lg-3" style="margin-left:0px!important;padding:0px!important">
+                        <img class="img-p" style="width:100px;height:100px;border-radius: 20px;object-fit:cover" src="../../../../assets/images/back2.jpeg" alt="Generic placeholder image"  class="ml-lg-5 order-1 order-lg-2">
+                    </div>
+                    <div class="col-lg-5" style="border-bottom: 4px solid black;">
+                        <div style="line-height:0.5;margin-top:10px">
+                            <p>Order Id : <b>#43211323</b></p>
+                            <p>Product Name : <b>Product 1</b></p>
+                            <p>Ordered By : <b>Username 1</b></p>
+                            <p>Status :<b style="color:green">Delivered</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin:auto!important;">
+            <h2>$450</h2>
+            <a [routerLink]="['view']" routerLinkActive="router-link-active"  class="btn btn-success" style="font-size: 20px;color:black!important"><b>View Details</b></a>
+            </div>
+        </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>

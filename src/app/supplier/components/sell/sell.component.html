@@ -1,0 +1,39 @@
+
+
+ <div class="register" style="margin-top: 50px ; padding-top: 20px;padding-bottom: 30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Inventory Details</h1>
+          <p class="lead text-center">Add Inventory : <b style="color:green">Product 1</b></p>
+          <form (ngSubmit)="addInventory()">
+            <div class="form-group">
+              <input type="number" class="form-control form-control-lg"
+
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.username}" 
+               placeholder="Enter Inventory quantity" name="productquantity" 
+              [(ngModel)]="inventory.productquantity"
+              autocomplete="off"
+              required />
+
+              <div class="invalid-feedback d-block">{{error.productquantity}}</div>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control form-control-lg"
+                step="0.01"
+                [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.productprice}" 
+                 placeholder="Enter inventory price" name="productprice" 
+                [(ngModel)]="inventory.productprice"
+                autocomplete="off"
+                required />
+  
+                <div class="invalid-feedback d-block">{{error.productprice}}</div>
+              </div>
+             
+            <input type="submit" value="Add"class="btn btn-info btn-block mt-4" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
