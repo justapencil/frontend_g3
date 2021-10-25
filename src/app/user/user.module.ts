@@ -7,6 +7,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
+import { UserService } from './service/user.service';
 
 
 @NgModule({
@@ -20,6 +21,6 @@ import { SharedModule } from '../shared/shared.module';
     HttpClientModule,
     SharedModule,
     UserRoutingModule
-  ]
+  ],providers:[UserService]
 })
 export class UserModule { }
