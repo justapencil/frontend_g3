@@ -14,7 +14,7 @@ export class HeaderInterceptor implements HttpInterceptor {
   
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    console.log('Inside Header.interceptor');
+  
 
     if(request.headers.has('Content-Type')) {
       console.log('Inside the if Condition');

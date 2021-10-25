@@ -1,14 +1,64 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
   <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active" ><b>Moglix</b></a>
   <ul class="navbar-nav"> 
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/user/login']" routerLinkActive="router-link-active" >Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/user/signup']" routerLinkActive="router-link-active" >Signup</a>
-    </li>
+    <!----Admin------>
+    <div *ngIf="rolename == 'Admin'">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Dashboard</a>
+      </li>
+      </div>
+      <!----------------->
+      <!----Catalog-Admin------>
+    <div *ngIf="rolename == 'Catalog-Admin'">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/catalog']" routerLinkActive="router-link-active" >Dashboard</a>
+      </li>
+      </div>
+      <!----------------->
+      <!----Supplier------>
+    <div *ngIf="rolename == 'Supplier'">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/supplier']" routerLinkActive="router-link-active" >Dashboard</a>
+      </li>
+      </div>
+      <!----------------->
+      <!----Admin------>
+    <div *ngIf="rolename == 'Oms-Admin'">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/oms']" routerLinkActive="router-link-active" >Dashboard</a>
+      </li>
+      </div>
+      <!----------------->
+      <!----Admin------>
+    <div *ngIf="rolename == 'Customer'">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/online']" routerLinkActive="router-link-active" >Dashboard</a>
+      </li>
+      </div>
+      <!----------------->
+      <!----Offline------>
+      <div *ngIf="rolename == null">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
+        </li>    
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/user/login']" routerLinkActive="router-link-active" >Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/user/signup']" routerLinkActive="router-link-active" >Signup</a>
+      </li>  
+    </div>
+      <!----------------->  
+      <div *ngIf="rolename != null">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Welcome <b style="color:Yellow">{{this.username}}</b></a> 
+        </li>
+        </div>
+        <div *ngIf="rolename != null" style="float:left">
+          <li class="nav-item" style="float:left">
+            <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Welcome <b style="color:Yellow">{{this.username}}</b></a> 
+          </li>
+          </div>
+          
   </ul>
 </nav>

@@ -18,6 +18,6 @@ export class UserService {
     return this.httpClient.post(this.api + 'add', user); 
   }
   login(emailId: string,password: string): Observable<any> {
-    return this.httpClient.post(this.api + 'check', {emailId: emailId, password: password});
+    return this.httpClient.get(this.api + 'login?emailid='+ emailId+'&userpassword='+ password);
   }
 }

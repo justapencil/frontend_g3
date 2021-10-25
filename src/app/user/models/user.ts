@@ -3,5 +3,5 @@ export class User {
     userName: string;
     emailId: string;
     password: string;
-    // password2: string;
+    password2: string;
 }

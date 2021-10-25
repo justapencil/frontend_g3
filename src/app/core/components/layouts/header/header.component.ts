@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  rolename:any= {};
+  username:any= {};
   constructor() { }
 
   ngOnInit(): void {
+    this.rolename = JSON.parse(localStorage.getItem('userdetails')).role.roleName; 
+    this.username = JSON.parse(localStorage.getItem('userdetails')).userName; 
   }
-
+  
 }

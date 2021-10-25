@@ -13,7 +13,7 @@ export class LogInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.log('hello from Token.interceptor');
+    
     return next.handle(request);
   }
 }

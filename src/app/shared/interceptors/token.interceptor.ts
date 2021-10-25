@@ -20,18 +20,18 @@ export class TokenInterceptor implements HttpInterceptor {
     // token has user info
 
   if(request.url.includes('login') || request.url.includes('register')){
-    console.log('Inside the url if condition from token  interceptor')
+  
   }  
   if(validateToken()){
 
     const token = localStorage.getItem('token');
-    console.log('Inside the token');
+    
     request = request.clone({
       headers: request.headers.set('authorization',token || '')});
       return next.handle(request);
   }
   else{
-    console.log('Token Expired');
+    
     this.router.navigate(['/user/login']);
   }
   // token.expired ==> it should redirect to login package
