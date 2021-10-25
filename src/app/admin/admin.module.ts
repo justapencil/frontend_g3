@@ -8,6 +8,7 @@ import { AddUserByRoleComponent } from './components/add-user-by-role/add-user-b
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminService } from './service/admin.service';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,FormsModule,SharedModule,HttpClientModule,
     AdminRoutingModule
-  ]
+  ],providers: [AdminService]
+  
 })
 export class AdminModule { }

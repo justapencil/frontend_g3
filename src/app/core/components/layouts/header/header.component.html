@@ -1,64 +1,92 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active" ><b>Moglix</b></a>
-  <ul class="navbar-nav"> 
-    <!----Admin------>
-    <div *ngIf="rolename == 'Admin'">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Dashboard</a>
-      </li>
-      </div>
-      <!----------------->
-      <!----Catalog-Admin------>
-    <div *ngIf="rolename == 'Catalog-Admin'">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/catalog']" routerLinkActive="router-link-active" >Dashboard</a>
-      </li>
-      </div>
-      <!----------------->
-      <!----Supplier------>
-    <div *ngIf="rolename == 'Supplier'">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/supplier']" routerLinkActive="router-link-active" >Dashboard</a>
-      </li>
-      </div>
-      <!----------------->
-      <!----Admin------>
-    <div *ngIf="rolename == 'Oms-Admin'">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/oms']" routerLinkActive="router-link-active" >Dashboard</a>
-      </li>
-      </div>
-      <!----------------->
-      <!----Admin------>
-    <div *ngIf="rolename == 'Customer'">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/online']" routerLinkActive="router-link-active" >Dashboard</a>
-      </li>
-      </div>
-      <!----------------->
-      <!----Offline------>
-      <div *ngIf="rolename == null">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <!-- Navbar brand -->
+           <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
-        </li>    
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/user/login']" routerLinkActive="router-link-active" >Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/user/signup']" routerLinkActive="router-link-active" >Signup</a>
-      </li>  
-    </div>
-      <!----------------->  
-      <div *ngIf="rolename != null">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Welcome <b style="color:Yellow">{{this.username}}</b></a> 
+          <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" ><b style="font-size:18px">Moglix</b></a>
         </li>
-        </div>
-        <div *ngIf="rolename != null" style="float:left">
-          <li class="nav-item" style="float:left">
-            <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Welcome <b style="color:Yellow">{{this.username}}</b></a> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div *ngIf="rolename == null">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
           </li>
-          </div>
-          
-  </ul>
+        </div>
+       
+        <div *ngIf="rolename == null">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/user/login']" routerLinkActive="router-link-active" >Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/user/signup']" routerLinkActive="router-link-active" >Sign Up</a>
+        </li>
+        
+        </div>
+        <div *ngIf="rolename == 'Admin'">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Dashboard</a>
+          </li>
+        </div>
+        <div *ngIf="rolename == 'Catalog-Admin'">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/catalog']" routerLinkActive="router-link-active" >Dashboard</a>
+          </li>
+        </div>
+        <div *ngIf="rolename == 'Supplier'">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/supplier']" routerLinkActive="router-link-active" >Dashboard</a>
+          </li>
+        </div>
+        <div *ngIf="rolename == 'Oms'">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/oms']" routerLinkActive="router-link-active" >Dashboard</a>
+          </li>
+        </div>
+        <div *ngIf="rolename == 'Customer'">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/online']" routerLinkActive="router-link-active" >Dashboard</a>
+          </li>
+        </div>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+    <div *ngIf="rolename != null">
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <div *ngIf="rolename == 'Customer'">
+      <a class="text-reset me-3 color-white" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+</div>
+      <!-- Notifications -->
+            <!-- Avatar -->
+            <a class="me-3 color-white" ng-click="logout()">
+              <i class="fa fa-sign-out-alt"></i>&nbsp;&nbsp;<b>Logout</b>
+            </a>
+     </div>
+     </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
 </nav>
+<!-- Navbar -->

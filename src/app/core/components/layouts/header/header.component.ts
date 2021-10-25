@@ -13,7 +13,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.rolename = JSON.parse(localStorage.getItem('userdetails')).role.roleName; 
-    this.username = JSON.parse(localStorage.getItem('userdetails')).userName; 
+   
+  }
+  logout(){
+    alert("youre good")
   }
   
 }

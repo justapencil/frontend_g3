@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/user/models/user';
 import { Role } from '../../models/role';
+import { AdminService } from '../../service/admin.service';
 
 @Component({
   selector: 'app-add-role',
@@ -10,11 +12,23 @@ import { Role } from '../../models/role';
 export class AddRoleComponent implements OnInit {
   role:Role = new Role();
   error: any = {};
-  constructor() { }
+  constructor(private router: Router, private adminService: AdminService) { }
 
   ngOnInit(): void {
   }
-createRole(){}
+createRole(){
+  this.adminService.register(this.role).subscribe(
+    (response) =>{
+      console.log(JSON.stringify(response));
+      this.router.navigate(['/admin']);
+    },
+    (err) =>{
+      this.error=err.error;
+      console.log(err);
+    }
+  );
+
+}
 
 }
 

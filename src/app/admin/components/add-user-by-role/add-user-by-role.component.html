@@ -11,44 +11,37 @@
               <input type="text" class="form-control form-control-lg"
 
               [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.username}" 
-               placeholder="Enter your username" name="username" 
-              [(ngModel)]="user.username"
+               placeholder="Enter your username" name="userName" 
+              [(ngModel)]="user.userName"
               autocomplete="off"
               required />
 
-              <div class="invalid-feedback d-block">{{error.username}}</div>
+              <div class="invalid-feedback d-block">{{error.userName}}</div>
             </div>
             <div class="form-group">
               <input type="email" class="form-control form-control-lg"
               [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.email}" 
               
               placeholder="Enter email" name="email" 
-              [(ngModel)]="user.email"/>
-             <div class="invalid-feedback d-block">{{error.email}}</div>
+              [(ngModel)]="user.emailId"/>
+             <div class="invalid-feedback d-block">{{error.emailId}}</div>
               
             </div>
             <div class="form-group">
-              <select class="form-control" id="sel1" name="role" [(ngModel)]="user.role">
+              <select class="form-control" id="sel1" name="roleId" [(ngModel)]="user.roleId">
                 <option value="" disabled selected>Please Choose...</option>
-                <option value="role1">role1</option>
-                <option value="role2">role2</option>
-                <option value="role3">role3</option>
-                <option value="role4">role4</option>
+                <option value="1">Admin</option>
+                <option value="6">Catalog Admin</option>
+                <option value="7">Supplier</option>
+                <option value="5">Oms</option>
               </select>
             </div>
-            <div class="form-group">
+           <div class="form-group">
               <input type="password" class="form-control form-control-lg" 
-              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.password}"
-              placeholder="Password" name="password" 
-              [(ngModel)]="user.password"/>
-              
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control form-control-lg" 
-              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.userid}" 
-              placeholder="Confirm Password" name="password2"
-              [(ngModel)]="user.password2" />
-              <div class="invalid-feedback d-block">{{error.password}}</div>
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.password1}" 
+              placeholder="Confirm Password" name="password1"
+              [(ngModel)]="user.password1" />
+              <div class="invalid-feedback d-block">{{error.password1}}</div>
             </div>
             <input type="submit" class="btn btn-info btn-block mt-4" />
           </form>
