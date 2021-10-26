@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,14 +10,17 @@ export class HeaderComponent implements OnInit {
 
   rolename:any= {};
   username:any= {};
-  constructor() { }
+  status:any= {};
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.rolename = JSON.parse(localStorage.getItem('userdetails')).role.roleName; 
-   
+    this.status= JSON.parse(localStorage.getItem('userdetails'));
+   console.log(this.status);
   }
   logout(){
-    alert("youre good")
+    localStorage.setItem('userdetails', null);
+    this.router.navigate(['/'])
   }
   
 }

@@ -25,6 +25,7 @@ userdetails:any = {};
       console.log(JSON.stringify(response));
 
       localStorage.setItem('userdetails',JSON.stringify(response));
+      localStorage.setItem('status','online');
       // localStorage.setItem('Userdetails',JSON.stringify(jwt_decode(response.token)));  
       // if(validateToken())
       // {
@@ -33,14 +34,15 @@ userdetails:any = {};
       //  
       // } 
       this.rolename = JSON.parse(localStorage.getItem('userdetails')).role.roleName;  
-
+      console.log("object")
       if(this.rolename=='Admin')
         {
+          console.log("object")
         this.router.navigate(['/admin']);
          }
          else if(this.rolename=='Catalog-Admin')
          {
-           this.router.navigate(['/catalog-admin']);
+           this.router.navigate(['/catalog']);
          }
          else if(this.rolename=='Oms-Admin')
          {

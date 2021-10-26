@@ -22,19 +22,19 @@ export class TokenInterceptor implements HttpInterceptor {
   if(request.url.includes('login') || request.url.includes('register')){
   
   }  
-  if(validateToken()){
+  // if(validateToken()){
 
-    const token = localStorage.getItem('token');
+  //   const token = localStorage.getItem('token');
     
-    request = request.clone({
-      headers: request.headers.set('authorization',token || '')});
-      return next.handle(request);
-  }
-  else{
+  //   request = request.clone({
+  //     headers: request.headers.set('authorization',token || '')});
+  //     return next.handle(request);
+  // }
+  // else{
     
-    this.router.navigate(['/user/login']);
-  }
-  // token.expired ==> it should redirect to login package
-  return next.handle(request);
+  //   this.router.navigate(['/user/login']);
+  // }
+  // // token.expired ==> it should redirect to login package
+   return next.handle(request);
   }
 }

@@ -9,13 +9,13 @@
             <div class="form-group">
               <input type="text" class="form-control form-control-lg"
 
-              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.name}" 
-               placeholder="Enter category name" name="name" 
-              [(ngModel)]="category.name"
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.catName}" 
+               placeholder="Enter category name" name="catName" 
+              [(ngModel)]="category.catName"  
               
               required />
 
-              <div class="invalid-feedback d-block">{{error.name}}</div>
+              <div class="invalid-feedback d-block">{{error.catName}}</div>
             </div>
                 <input type="submit" class="btn btn-info btn-block mt-4" value="Create"/>
           </form>

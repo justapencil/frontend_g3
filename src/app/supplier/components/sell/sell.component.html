@@ -5,14 +5,14 @@
       <div class="row">
         <div class="col-md-8 m-auto">
           <h1 class="display-4 text-center">Inventory Details</h1>
-          <p class="lead text-center">Add Inventory : <b style="color:green">Product 1</b></p>
+          <p class="lead text-center">Add Inventory : <b style="color:green">{{productname}}</b></p>
           <form (ngSubmit)="addInventory()">
             <div class="form-group">
               <input type="number" class="form-control form-control-lg"
 
-              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.username}" 
-               placeholder="Enter Inventory quantity" name="productquantity" 
-              [(ngModel)]="inventory.productquantity"
+              [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.productQty}" 
+               placeholder="Enter Inventory quantity" name="productQty" 
+              [(ngModel)]="inventory.productQty"
               autocomplete="off"
               required />
 
@@ -22,8 +22,8 @@
                 <input type="number" class="form-control form-control-lg"
                 step="0.01"
                 [ngClass]="{'form-control form-control-lg':true,'is-invalid':error.productprice}" 
-                 placeholder="Enter inventory price" name="productprice" 
-                [(ngModel)]="inventory.productprice"
+                 placeholder="Enter inventory price" name="productPrice" 
+                [(ngModel)]="inventory.productPrice"
                 autocomplete="off"
                 required />
   

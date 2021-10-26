@@ -24,7 +24,7 @@
           <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" ><b style="font-size:18px">Moglix</b></a>
         </li>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div *ngIf="rolename == null">
+        <div *ngIf="status == null">
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
           </li>
@@ -80,9 +80,11 @@
 </div>
       <!-- Notifications -->
             <!-- Avatar -->
-            <a class="me-3 color-white" ng-click="logout()">
-              <i class="fa fa-sign-out-alt"></i>&nbsp;&nbsp;<b>Logout</b>
-            </a>
+            <div *ngIf="rolename != null">
+            <button class="btn btn-primary" style="background-color: red;border: none;" (click)="logout()">
+              <i class="fa fa-sign-out-alt" ></i>&nbsp;&nbsp;<b>Logout</b>
+            </button>
+            </div>
      </div>
      </div>
     <!-- Right elements -->

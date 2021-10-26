@@ -9,6 +9,9 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminService } from '../admin/service/admin.service';
+import { CatalogService } from './service/catalog.service';
+import { CategoryService } from './service/category.service';
 
 
 @NgModule({
@@ -21,6 +24,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,SharedModule,FormsModule,HttpClientModule,
     CatalogRoutingModule
-  ]
+  ],providers: [CatalogService,CategoryService]
 })
 export class CatalogModule { }

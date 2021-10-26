@@ -13,6 +13,8 @@ import { CompletedComponent } from './components/completed/completed.component';
 import { UpdateComponent } from './components/update/update.component';
 import { SellComponent } from './components/sell/sell.component';
 import { CompletedDetailsComponent } from './components/completed-details/completed-details.component';
+import { CatalogService } from './service/catalog.service';
+import { InventoryService } from './service/inventory.service';
 
 
 @NgModule({
@@ -24,11 +26,12 @@ import { CompletedDetailsComponent } from './components/completed-details/comple
     CompletedComponent,
     UpdateComponent,
     SellComponent,
-    CompletedDetailsComponent
+    CompletedDetailsComponent,
+    
   ],
   imports: [
     CommonModule,FormsModule,SharedModule,HttpClientModule,
     SupplierRoutingModule
-  ]
+  ],providers: [CatalogService,InventoryService]
 })
 export class SupplierModule { }

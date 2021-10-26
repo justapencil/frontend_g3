@@ -19,15 +19,10 @@
           <hr style="border: 1px solid black">
           <p class="lead text-muted">Avaliable Roles</p>
           <div class="btn-group mb-4" role="group">
+            <div *ngFor="let role of Roles">
               <a [routerLink]="['/admin/add-role/role1']"  class="btn btn-light">
                 <i class="fab fa-black-tie text-info mr-1"></i>
-                Role 1</a>
-                <a [routerLink]="['/admin/add-role/role2']"  class="btn btn-light">
-                  <i class="fab fa-black-tie text-info mr-1"></i>
-                  Role 2</a>
-                  <a [routerLink]="['/admin/add-role/role3']"  class="btn btn-light">
-                    <i class="fab fa-black-tie text-info mr-1"></i>
-                    Role 3</a>
+                {{role.roleName}}</a></div>
            </div>
       
         </div>
